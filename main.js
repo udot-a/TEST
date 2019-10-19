@@ -5,13 +5,12 @@ async function start() {
     userInfo.style.display = "none"
 
     file.onchange = function (event) {
-            let photo = event.target.files[0]
-            if (photo.type.indexOf("image") !== 0) return
-            if (photo.size > 300000) return
-            let reader = new FileReader(photo)
+            if (event.target.files[0].type.indexOf("image") !== 0) return
+            if (event.target.files[0].size > 300000) return
+            let reader = new FileReader(event.target.files[0])
             reader.onload = event => document.getElementsByName("user-photo")[0].value = event.target.result
-            reader.readAsDataURL()
-            document.getElementById("user-photo-preview").src = URL.createObjectURL(photo)
+            reader.readAsDataURL(event.target.files[0])
+            document.getElementById("user-photo-preview").src = URL.createObjectURL(event.target.files[0])
     }
 
     pass1.oninput = function (event) {
