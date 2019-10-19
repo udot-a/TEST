@@ -49,6 +49,7 @@ async function start() {
             .then(response => console.log(response))
     }
 }
+start()
 fetch('sample.css')
 
     .then(response => response.text())
