@@ -1,0 +1,21 @@
+
+  <script src="https://cdn.rawgit.com/chrisveness/crypto/4e93a4d/sha256.js"></script>
+
+
+  <section id="registration">
+      <form id="registrationForm">
+        <input name="user-name" placeholder="Enter your name">
+        <input type="password" id="pass-1" placeholder="Set your password" style="color: red;">
+        <input type="password" id="pass-2" placeholder="Repeat your password" disabled="">
+        <input type="hidden" value="" name="pass-hash">
+        <input type="hidden" value="" name="user-photo">
+        <img src="https://avatarko.ru/img/kartinka/1/multfilm_gomer.png" id="user-photo-preview" width="80">
+        <input type="file" name="file" id="file" class="inputfile">
+        <label for="file">Select avatar</label>
+      </form>
+      <button id="register-button">Register</button>
+  </section>
+  <section id="userInfo">
+    <h4></h4>
+    <img src="null" width="80">
+  </section>
